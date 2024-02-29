@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: rgb(81, 0, 128);
+			background-color: rgb(43, 107, 235);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -30,7 +30,7 @@
 
 	<script>
 		(function(){
-			'use strict'
+						'use strict'
 			/* global jQuery */
 
 			//////////////////////////////////////////////////////////////////
@@ -64,6 +64,7 @@
 			// TODO 2 - Variable declarations 
 			var points = 0;
             var positionX = 0;
+			var speed = 10;
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,8 +72,14 @@
 			turn it around! 
 			*/ 
 			function update() {
-				positionX = positionX + 10;
+				
+				positionX = positionX + speed;
 				moveBoxTo(positionX);
+				if (positionX > boardwith){speed = -speed * 1 ;
+				}
+              if (position < 0);{ speed * 1;
+			}
+		    
 			};
 
 			/* 
@@ -84,10 +91,13 @@
 				/* Your code to Increase positionX by 10 HERE*/
 				positionX=0;
 				points = + points + 1;
-				changeBoxText(points);
+				speed = speed + 3;
+                changeBoxText(points);
+				points = + points + 1;
+				speed = speed + 3;
 			};
 
-		})();
+		} )();
 	</script>
 </body>
 </html>
