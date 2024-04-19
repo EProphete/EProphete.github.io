@@ -22,14 +22,14 @@ var init = function (window) {
     // TODO 2 : Create a function that draws a circle
 
   function drawCircle (){
-    circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
+    circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
 physikz.addRandomVelocity(circle, canvas, 2.5, 2.5);
 view.addChild(circle);
 circles.push(circle);
   }
 
     // TODO 3 / 7 : Call the drawCircle() function
-for( var i = 0; 1 <= 100; i++){
+for (var i = 0; i <= 100; i++){
   drawCircle();
 }
     ////////////////////////////////////////////////////////////
@@ -42,9 +42,9 @@ for( var i = 0; 1 <= 100; i++){
         and check to see if it has drifted off the screen.         
         */
     function update(){
-      for(var i = 0; i < circles.length; i++){
-        physikz.updatePosition(circle[i]);
-        game,checkCirclePosition(circle[i]);
+      for(var i = 0; i < circles.length; i++) {
+        physikz.updatePosition(circles[i]);
+        game.checkCirclePosition(circles[i]);
       }
     }
       // TODO 4 : Update the circle's position //
@@ -55,7 +55,7 @@ for( var i = 0; 1 <= 100; i++){
 
 
       // TODO 9 : Iterate over the array
-    }
+    
 
     /* 
         This Function should check the position of a circle that is passed to the 
